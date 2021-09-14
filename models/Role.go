@@ -12,6 +12,6 @@ type Role struct {
 	AddTime     int
 }
 
-func (Role) TableName() string {
+func (r *Role) TableName() string {
 	return "role"
 }
