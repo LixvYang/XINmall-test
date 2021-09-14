@@ -73,3 +73,4 @@ func (c *cacheDB) Get(key string, obj interface{}) bool {
 	}
 	return false
 }
+

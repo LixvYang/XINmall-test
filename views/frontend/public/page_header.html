@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Lixin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XinMall</title>
+    
+</head>
+<body>
+<!--header-->
+    <header>
+        <div class="top center">
+            <div class="left f1">
+                <ul>
+                {{range $key,$value := .topMenuList}}
+                    <li>
+                        <a href="{{$value.Link}}" {{if eq $value.IsOpennew 2}} target="_blank" {{end}}>{{$value.Title}}</a>
+                    </li>
+                {{end}}
+                    <div class="clear"></div>
+                </ul>
+            </div>
+
+            <div class="right fr">
+                <div class="cart fr"><a href="/cart">Cart</a></div>
+                <div class="fr">
+                    {{str2html .userinfo}}
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </header>
+<!--end header-->

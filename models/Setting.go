@@ -31,5 +31,5 @@ func GetSettingByColumn(columnName string) string {
 	DB.First(&setting)
 	v := reflect.ValueOf(setting)
 	val := v.FieldByName(columnName).String()
-	return v	
+	return val	
 }
